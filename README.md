@@ -16,8 +16,7 @@
 
 4. Som användare vill jag kunna skicka iväg min reservation och få tillbaka ett ett bokningsnummer och totalsumma så jag vet hur mycket jag ska betala. (120 kr / person + 100 kr / bana).
 
-   - [ ] Ska få en bekräftelse på att bokning är genomförd där all information skall finnas samt total pris och ett bokningnummer.
-   - [ ] Ska kunna trycka på en knapp för gå till alla bokningar man gjort.
+   - [x] Ska få en bekräftelse på att bokning är genomförd där all information skall finnas samt total pris och ett bokningsnummer.
 
 5. Som användare vill jag kunna navigera mellan boknings-och bekräftelsevyn. (Navigation.test.jsx)
    - [x] Ska kunna toggla mellan att visa/dölja menyn

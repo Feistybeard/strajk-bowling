@@ -23,6 +23,7 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^4.2.1",
     "jsdom": "^23.0.1",
+    "msw": "^2.0.10",
     "vite": "^4.1.0",
     "vitest": "^1.0.1"
   }
