@@ -7,8 +7,8 @@ const calculatePrice = (people, lanes) => {
 const booking = {
   when: '2023-12-31-T15:00',
   shoes: ['43', '43'],
-  lanes: '1',
-  people: '2',
+  lanes: 1,
+  people: 2,
 };
 
 const bookingResponse = {

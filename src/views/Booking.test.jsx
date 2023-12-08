@@ -6,6 +6,7 @@ import {
   vi,
   afterAll,
   beforeAll,
+  afterEach,
 } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
@@ -13,7 +14,6 @@ import server from '../msw/server';
 import { booking } from '../msw/handlers';
 import Booking from './Booking';
 import Confirmation from './Confirmation';
-import { afterEach } from 'vitest';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
@@ -27,7 +27,7 @@ function addShoes(nrOfBowlers, data) {
     fireEvent.click(addShoeButton);
     const shoeSizeInput = screen.getAllByRole('textbox')[i + 1];
     fireEvent.change(shoeSizeInput, { target: { value: data.shoes[i] } });
-    expect(shoeSizeInput).toHaveValue('43');
+    expect(shoeSizeInput).toHaveValue(data.shoes[0]);
     nrOfShoes++;
   }
   return nrOfShoes;
@@ -49,10 +49,10 @@ function fillForm(data) {
 
   const lanesInput = screen.getByText(/lanes/i).nextSibling;
   fireEvent.change(lanesInput, { target: { value: data.lanes } });
-  expect(dateInput).toHaveValue('2023-12-31');
-  expect(timeInput).toHaveValue('15:00');
-  expect(bowlersInput).toHaveValue(2);
-  expect(lanesInput).toHaveValue(1);
+  expect(dateInput).toHaveValue(data.when.split('-').slice(0, 3).join('-'));
+  expect(timeInput).toHaveValue(data.when.split('T')[1]);
+  expect(bowlersInput).toHaveValue(data.people);
+  expect(lanesInput).toHaveValue(data.lanes);
 }
 
 describe('booking testing', () => {
