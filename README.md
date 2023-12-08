@@ -1,4 +1,4 @@
-1. Som användare vill jag kunna boka datum och tid samt ange antal spelare så att jag kan reservera 1 eller flera baner i bowlinghallen.
+1. Som användare vill jag kunna boka datum och tid samt ange antal spelare så att jag kan reservera 1 eller flera baner i bowlinghallen. (Booking.test.jsx)
 
    - [x] Ska kunna fylla i ett formulär med det som krävs för en boking.
    - [x] Ska kunna bekräfta bokningen genom att trycka på en knapp och få bokningen bekräftad.
@@ -14,7 +14,7 @@
 
    - [x] Ska kunna tabort skor
 
-4. Som användare vill jag kunna skicka iväg min reservation och få tillbaka ett ett bokningsnummer och totalsumma så jag vet hur mycket jag ska betala. (120 kr / person + 100 kr / bana).
+4. Som användare vill jag kunna skicka iväg min reservation och få tillbaka ett ett bokningsnummer och totalsumma så jag vet hur mycket jag ska betala. (120 kr / person + 100 kr / bana). (Booking.test.jsx)
 
    - [x] Ska få en bekräftelse på att bokning är genomförd där all information skall finnas samt total pris och ett bokningsnummer.
 
